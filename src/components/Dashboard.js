@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import '../styles/Dashboard.css';
 
-const Dashboard = ({ onManageCredentials, onCreateJobAgreement }) => {
+const Dashboard = ({ onManageCredentials, onCreateJobAgreement, onViewJobOffers }) => {
   const [account, setAccount] = useState('0x123...abc'); // Placeholder for connected account
 
   // Placeholder data for recent activities
@@ -30,7 +30,7 @@ const Dashboard = ({ onManageCredentials, onCreateJobAgreement }) => {
           <ul>
             <li><a href="#" onClick={onManageCredentials}>Manage Credentials</a></li>
             <li><a href="#" onClick={onCreateJobAgreement}>Create Job Agreements</a></li>
-            <li><a href="#">View Job Offers</a></li>
+            <li><a href="#" onClick={onViewJobOffers}>View Job Offers</a></li>
           </ul>
         </div>
         <div className="recent-activities">
