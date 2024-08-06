@@ -3,24 +3,27 @@
 import React, { useState } from 'react';
 import LandingPage from './components/LandingPage';
 import Dashboard from './components/Dashboard';
+import ManageCredentials from './components/ManageCredentials';
 import './styles/LandingPage.css';
 import './styles/Dashboard.css';
+import './styles/ManageCredentials.css';
 
 function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [page, setPage] = useState('landing');
 
-  // This will toggle between the landing page and dashboard for demonstration
-  const handleAuthentication = () => {
-    setIsAuthenticated(true);
+  const handlePageChange = (newPage) => {
+    setPage(newPage);
   };
 
   return (
     <div className="App">
-      {!isAuthenticated ? (
-        <LandingPage onConnect={handleAuthentication} />
-      ) : (
-        <Dashboard />
+      {page === 'landing' && <LandingPage onConnect={() => handlePageChange('dashboard')} />}
+      {page === 'dashboard' && (
+        <Dashboard
+          onManageCredentials={() => handlePageChange('credentials')}
+        />
       )}
+      {page === 'credentials' && <ManageCredentials />}
     </div>
   );
 }

@@ -1,9 +1,9 @@
 // src/components/Dashboard.js
 
 import React, { useState } from 'react';
-import '../styles/Dashboard.css'; // Corrected path
+import '../styles/Dashboard.css';
 
-const Dashboard = () => {
+const Dashboard = ({ onManageCredentials }) => {
   const [account, setAccount] = useState('0x123...abc'); // Placeholder for connected account
 
   // Placeholder data for recent activities
@@ -28,7 +28,7 @@ const Dashboard = () => {
         <div className="navigation-links">
           <h2>Quick Access</h2>
           <ul>
-            <li><a href="#">Manage Credentials</a></li>
+            <li><a href="#" onClick={onManageCredentials}>Manage Credentials</a></li>
             <li><a href="#">Create Job Agreements</a></li>
             <li><a href="#">View Job Offers</a></li>
           </ul>
