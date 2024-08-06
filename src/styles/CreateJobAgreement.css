@@ -1,0 +1,86 @@
+/* src/styles/CreateJobAgreement.css */
+
+.job-agreement-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #234e70;
+    margin-bottom: 20px;
+}
+
+.job-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.job-form input,
+.job-form textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.job-form textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.job-form button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #3b5998;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.job-form button:hover {
+    background-color: #2a4887;
+}
+
+.job-list {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.job-list h2 {
+    font-size: 1.8rem;
+    color: #3b5998;
+    margin-bottom: 15px;
+}
+
+.job-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.job-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.job-item h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #234e70;
+}
+
+.job-item p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #6a7a8c;
+}
