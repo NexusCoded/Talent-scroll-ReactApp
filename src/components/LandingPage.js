@@ -1,10 +1,10 @@
 // src/components/LandingPage.js
 
 import React, { useState, useEffect } from 'react';
-import '../styles/LandingPage.css'; // Correct import path for the CSS file
+import '../styles/LandingPage.css';
 import Web3 from 'web3';
 
-const LandingPage = () => {
+const LandingPage = ({ onConnect }) => {
   const [account, setAccount] = useState(null);
   const [web3, setWeb3] = useState(null);
 
@@ -20,6 +20,7 @@ const LandingPage = () => {
       try {
         const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
         setAccount(accounts[0]);
+        onConnect(); // Trigger authentication to switch to Dashboard
       } catch (error) {
         console.error('Error connecting wallet', error);
       }

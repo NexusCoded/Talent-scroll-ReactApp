@@ -1,0 +1,76 @@
+/* src/styles/Dashboard.css */
+
+.dashboard-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+    font-size: 2.5rem;
+    color: #234e70; /* Consistent with the color theme */
+}
+
+.dashboard-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.user-profile, .navigation-links, .recent-activities {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.user-profile h2, .navigation-links h2, .recent-activities h2 {
+    font-size: 1.8rem;
+    color: #3b5998;
+    margin-bottom: 15px;
+}
+
+.user-profile p {
+    font-size: 1rem;
+    color: #6a7a8c;
+}
+
+.navigation-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navigation-links li {
+    margin-bottom: 10px;
+}
+
+.navigation-links a {
+    text-decoration: none;
+    color: #2a4887;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navigation-links a:hover {
+    color: #3b5998;
+}
+
+.recent-activities ul {
+    list-style: none;
+    padding: 0;
+}
+
+.recent-activities li {
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.recent-activities li:last-child {
+    border-bottom: none;
+}
