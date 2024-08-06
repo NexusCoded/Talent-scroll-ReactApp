@@ -1,0 +1,53 @@
+/* src/styles/Notifications.css */
+
+.notifications-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #234e70;
+    margin-bottom: 20px;
+}
+
+.notifications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.notification-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+.notification-card.read {
+    opacity: 0.6;
+}
+
+.notification-card p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #6a7a8c;
+}
+
+.notification-card button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #3b5998;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.notification-card button:hover {
+    background-color: #2a4887;
+}

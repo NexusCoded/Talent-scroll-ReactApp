@@ -1,0 +1,91 @@
+/* src/styles/NavBar.css */
+
+/* Reduce padding for smaller navbar height */
+.navbar {
+    background-color: #234e70;
+    padding: 5px 20px; /* Reduced padding */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Ensure the container is aligned and uses available space */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Reduce font size for logo to shrink navbar */
+.navbar-logo {
+    font-size: 1.2rem; /* Smaller font size */
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Slight adjustments to spacing between menu items */
+.navbar-menu {
+    display: flex;
+    gap: 10px; /* Reduced gap between menu items */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Maintain consistent font size for links */
+.navbar-menu li {
+    margin: 0;
+}
+
+.navbar-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem; /* Slightly smaller font size */
+    transition: color 0.3s ease;
+}
+
+/* Ensure active links are highlighted */
+.navbar-menu a.active-link,
+.navbar-menu a:hover {
+    color: #f0a500;
+}
+
+/* Align account info to avoid text wrapping */
+.navbar-account {
+    color: #fff;
+    font-size: 0.85rem; /* Smaller font size */
+}
+
+/* Mobile menu adjustments for toggling */
+@media (max-width: 768px) {
+    .navbar-menu {
+        flex-direction: column;
+        gap: 10px;
+        background-color: #234e70;
+        position: absolute;
+        top: 50px; /* Reduced to align better with page content */
+        right: 20px;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        display: none; /* Initially hidden */
+    }
+
+    .navbar-menu.show {
+        display: flex;
+    }
+
+    .navbar-toggle {
+        display: block;
+        cursor: pointer;
+        color: #fff;
+        font-size: 1.5rem;
+        margin-left: auto;
+    }
+}

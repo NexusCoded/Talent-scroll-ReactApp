@@ -31,6 +31,7 @@ const Dashboard = ({ account }) => {
             <li><NavLink to="/create-job" activeClassName="active-link">Create Job Agreements</NavLink></li>
             <li><NavLink to="/view-jobs" activeClassName="active-link">View Job Offers</NavLink></li>
             <li><NavLink to="/applications" activeClassName="active-link">Manage Applications</NavLink></li>
+            <li><NavLink to="/notifications" activeClassName="active-link">Notifications</NavLink></li>
             <li><NavLink to="/profile" activeClassName="active-link">Profile</NavLink></li>
           </ul>
         </div>

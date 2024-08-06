@@ -1,0 +1,45 @@
+/* src/styles/AdminJobManagement.css */
+
+.admin-job-management-container {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #234e70;
+    margin-bottom: 20px;
+}
+
+.job-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.job-table th, .job-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+    color: #6a7a8c;
+}
+
+.job-table th {
+    background-color: #f0f0f0;
+    color: #3b5998;
+    font-weight: bold;
+}
+
+.job-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.job-table select {
+    padding: 5px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
