@@ -1,0 +1,55 @@
+/* src/styles/ApplicationManagement.css */
+
+.application-management-container {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #234e70;
+    margin-bottom: 20px;
+}
+
+.applications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.application-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+.application-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+    color: #3b5998;
+}
+
+.application-card p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #6a7a8c;
+}
+
+.application-card button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #f0a500;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.application-card button:hover {
+    background-color: #e08900;
+}

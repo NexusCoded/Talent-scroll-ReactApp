@@ -8,6 +8,7 @@
     min-height: 100vh;
     background-color: #e0f7fa; /* Light aqua color inspired by the image */
     font-family: 'Roboto', sans-serif;
+    padding: 20px;
 }
 
 .banner {
@@ -62,4 +63,36 @@
     font-size: 1rem;
     color: #3b5998;
     margin-top: 1rem;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .connect-wallet-btn {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+
+    .connect-wallet-btn {
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
+    }
 }

@@ -1,11 +1,10 @@
 // src/components/Dashboard.js
 
-import React, { useState } from 'react';
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 import '../styles/Dashboard.css';
 
-const Dashboard = ({ onManageCredentials, onCreateJobAgreement, onViewJobOffers }) => {
-  const [account, setAccount] = useState('0x123...abc'); // Placeholder for connected account
-
+const Dashboard = ({ account }) => {
   // Placeholder data for recent activities
   const recentActivities = [
     { id: 1, action: 'Added new credential: Ethereum Developer Certificate' },
@@ -28,9 +27,11 @@ const Dashboard = ({ onManageCredentials, onCreateJobAgreement, onViewJobOffers 
         <div className="navigation-links">
           <h2>Quick Access</h2>
           <ul>
-            <li><a href="#" onClick={onManageCredentials}>Manage Credentials</a></li>
-            <li><a href="#" onClick={onCreateJobAgreement}>Create Job Agreements</a></li>
-            <li><a href="#" onClick={onViewJobOffers}>View Job Offers</a></li>
+            <li><NavLink to="/credentials" activeClassName="active-link">Manage Credentials</NavLink></li>
+            <li><NavLink to="/create-job" activeClassName="active-link">Create Job Agreements</NavLink></li>
+            <li><NavLink to="/view-jobs" activeClassName="active-link">View Job Offers</NavLink></li>
+            <li><NavLink to="/applications" activeClassName="active-link">Manage Applications</NavLink></li>
+            <li><NavLink to="/profile" activeClassName="active-link">Profile</NavLink></li>
           </ul>
         </div>
         <div className="recent-activities">

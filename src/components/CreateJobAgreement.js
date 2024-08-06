@@ -79,4 +79,3 @@ const CreateJobAgreement = () => {
 };
 
 export default CreateJobAgreement;
-

@@ -57,6 +57,10 @@
     transition: color 0.3s ease;
 }
 
+.navigation-links a.active-link {
+    color: #3b5998;
+}
+
 .navigation-links a:hover {
     color: #3b5998;
 }

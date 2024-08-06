@@ -1,6 +1,7 @@
-// src/components/ViewJobOffers.js
+// Example inside ViewJobOffers.js
 
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import '../styles/ViewJobOffers.css';
 
 const ViewJobOffers = () => {
@@ -24,46 +25,22 @@ const ViewJobOffers = () => {
     },
   ]);
 
-  const [selectedJob, setSelectedJob] = useState(null);
-
-  // Handle selecting a job to view details
-  const handleSelectJob = (jobId) => {
-    const job = jobOffers.find(j => j.id === jobId);
-    setSelectedJob(job);
-  };
-
-  // Handle applying for a job
-  const handleApply = (jobId) => {
-    alert(`Applied for job ID: ${jobId}`);
-    // Additional logic to handle application can be added here
-  };
-
   return (
     <div className="job-offers-container">
       <h1>Job Offers</h1>
       <div className="job-list">
         {jobOffers.map(job => (
-          <div key={job.id} className="job-card" onClick={() => handleSelectJob(job.id)}>
+          <div key={job.id} className="job-card">
             <h3>{job.title}</h3>
             <p><strong>Company:</strong> {job.company}</p>
             <p><strong>Location:</strong> {job.location}</p>
             <p><strong>Compensation:</strong> {job.compensation}</p>
+            <NavLink to={`/job-details/${job.id}`} className="details-link">View Details</NavLink>
           </div>
         ))}
       </div>
-      {selectedJob && (
-        <div className="job-details">
-          <h2>{selectedJob.title}</h2>
-          <p><strong>Company:</strong> {selectedJob.company}</p>
-          <p><strong>Location:</strong> {selectedJob.location}</p>
-          <p><strong>Compensation:</strong> {selectedJob.compensation}</p>
-          <p>{selectedJob.description}</p>
-          <button onClick={() => handleApply(selectedJob.id)}>Apply</button>
-        </div>
-      )}
     </div>
   );
 };
 
 export default ViewJobOffers;
-

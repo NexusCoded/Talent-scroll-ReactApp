@@ -1,12 +1,14 @@
 // src/components/LandingPage.js
 
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/LandingPage.css';
 import Web3 from 'web3';
 
 const LandingPage = ({ onConnect }) => {
   const [account, setAccount] = useState(null);
   const [web3, setWeb3] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (window.ethereum) {
@@ -20,7 +22,8 @@ const LandingPage = ({ onConnect }) => {
       try {
         const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
         setAccount(accounts[0]);
-        onConnect(); // Trigger authentication to switch to Dashboard
+        onConnect(accounts[0]); // Trigger authentication to switch to Dashboard
+        navigate('/dashboard'); // Redirect to Dashboard
       } catch (error) {
         console.error('Error connecting wallet', error);
       }
